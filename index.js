@@ -20,6 +20,11 @@ connectDB();
 // Routes
 app.use('/api/chat', chatRoutes);
 
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Hi, welcome to the server!');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
